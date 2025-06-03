@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container } from "react-bootstrap";
+import Header from "./components/Header";
+import Services from "./components/Services";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+import "./App.css";
+import Hero from "./components/Hero/Hero";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <main>
+
+        <section id="hero" className="py-5">
+          <Container>
+            <Hero/>
+          </Container>
+        </section>
+
+        <section id="services" className="py-5">
+          <Container>
+            <Services />
+          </Container>
+        </section>
+
+        <section id="portfolio" className="bg-light py-5">
+          <Container>
+            <Portfolio />
+          </Container>
+        </section>
+
+        <section id="contact" className="py-5">
+          <Container>
+            <Contact />
+          </Container>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
 

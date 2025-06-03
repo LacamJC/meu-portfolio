@@ -1,0 +1,75 @@
+.hero {
+  padding: 4rem 0;
+  background-color: #fff;
+  color: #111;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.content__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111;
+}
+.content__subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #555;
+}
+.content__description {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333;
+}
+.content__buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.buttonPrimary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #111;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.buttonPrimary:hover, .buttonPrimary:focus {
+  background-color: #333;
+  color: #fff;
+}
+
+.buttonSecondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #111;
+  background-color: transparent;
+  border: 2px solid #111;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.buttonSecondary:hover, .buttonSecondary:focus {
+  background-color: #111;
+  color: #fff;
+}
+
+.imageWrapper {
+  background-color: red;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .imageWrapper {
+    margin-top: 40px;
+  }
+}
+.imageWrapper .image {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}/*# sourceMappingURL=Hero.module.css.map */
