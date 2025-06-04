@@ -14,11 +14,10 @@ function Hero() {
               João Ramajo
               <br />
               <span className={styles.content__subtitle}>Criador de Soluções Digitais Personalizadas
-
-</span>
+              </span>
             </h1>
             <p className={styles.content__description}>
-              Transformando ideias em soluções digitais modernas, eficientes e personalizadas.
+              Construindo soluções digitais que facilitam processos, aumentam resultados e fazem sua empresa crescer.
             </p>
             <div className={styles.actionRow}>
               <div className={styles.content__buttons}>

@@ -9,6 +9,12 @@ const products = [
     iconClass: "bi bi-bar-chart-line",
     link: "/servico/smartreport",
   },
+    {
+    title: "ExpenseTrack",
+    description: "Seu controle financeiro a simples e direto",
+    iconClass: "bi-bar-chart-line",
+    link: "/servico/expense-track",
+  },
   // Você pode adicionar outros produtos aqui futuramente
 ];
 
