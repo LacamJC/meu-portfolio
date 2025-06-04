@@ -37,7 +37,7 @@ function Hero() {
           </Col>
           <Col md={6}className={`${styles.imageWrapper} animate-on-scroll ${isVisible ? 'visible' : ''}`} ref={ref}>
             <img
-              src="https://avatars.githubusercontent.com/u/12345678?v=4" // substitua pela sua imagem real
+              src="assets/images/my-and-rhaj.png" // substitua pela sua imagem real
               alt="João Ramajo"
               className={styles.image}
             />

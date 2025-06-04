@@ -29,7 +29,7 @@ function Header() {
     return (
         <Navbar expand="lg" bg="dark" variant="dark" sticky="top">
             <Container>
-                <Navbar.Brand href="#home"><i class="bi bi-code-slash"></i> João Ramajo</Navbar.Brand>
+                <Navbar.Brand href="#hero"><i class="bi bi-code-slash"></i> Ramajo</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbar-nav" />
                 <Navbar.Collapse id="navbar-nav">
                     <Nav className="ms-auto">
