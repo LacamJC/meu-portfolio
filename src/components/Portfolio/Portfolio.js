@@ -28,9 +28,15 @@ const projects = [
     categories: ["Projeto Web", "Sustentabilidade"],
     link: "https://github.com/LacamJC/ReactNPR",
     images: [
-      "https://placehold.co/250x180",
-      "https://placehold.co/250x180",
-      "https://placehold.co/250x180"
+      "/assets/images/npr/thumb/npr-01.webp",
+      "/assets/images/npr/thumb/npr-02.webp",
+      "/assets/images/npr/thumb/npr-03.webp",
+
+    ],
+    image_link: [
+      "/assets/images/npr/large/npr-01.webp",
+      "/assets/images/npr/large/npr-02.webp",
+      "/assets/images/npr/large/npr-03.webp",
     ]
   },
   {
@@ -47,8 +53,15 @@ const projects = [
     categories: ["Sistema de Gerenciamento"],
     link: "https://github.com/LacamJC/My_Bookshelf_2025",
     images: [
-      "https://placehold.co/250x180",
-      "https://placehold.co/250x180"
+      "/assets/images/mybookshelf/thumb/my-bookshelf-01.webp",
+      "/assets/images/mybookshelf/thumb/my-bookshelf-02.webp",
+      "/assets/images/mybookshelf/thumb/my-bookshelf-03.webp",
+
+    ],
+    image_link: [
+      "/assets/images/mybookshelf/large/my-bookshelf-01.webp",
+      "/assets/images/mybookshelf/large/my-bookshelf-02.webp",
+      "/assets/images/mybookshelf/large/my-bookshelf-03.webp",
     ]
   },
   {
@@ -65,10 +78,16 @@ const projects = [
     categories: ["Site Informativo", "Multilíngue"],
     link: "https://github.com/LacamJC/FilmsOnViews",
     images: [
-      "https://placehold.co/250x180",
-      "https://placehold.co/250x180",
-      "https://placehold.co/250x180",
-      "https://placehold.co/250x180"
+      "/assets/images/filmsOnViews/thumb/lacamjc.github.io-films-on-views-01.webp",
+      "/assets/images/filmsOnViews/thumb/lacamjc.github.io-films-on-views-02.webp",
+      "/assets/images/filmsOnViews/thumb/lacamjc.github.io-films-on-views-03.webp",
+      "/assets/images/filmsOnViews/thumb/lacamjc.github.io-films-on-views-04.webp"
+    ],
+    image_link: [
+      '/assets/images/filmsOnViews/large/lacamjc.github.io-films-on-views-02.webp',
+      '/assets/images/filmsOnViews/large/lacamjc.github.io-films-on-views-02.webp',
+      '/assets/images/filmsOnViews/large/lacamjc.github.io-films-on-views-02.webp',
+      '/assets/images/filmsOnViews/large/lacamjc.github.io-films-on-views-02.webp'
     ]
   }
 ];
@@ -86,11 +105,22 @@ function Portfolio() {
                 {/* Coluna de imagens */}
                 <Col md={5} className={styles.projectCard__images}>
                   <div className={styles.imageGrid}>
-                    {(project.images && project.images.length > 0 ? project.images : [project.image]).slice(0, 4).map((img, i) => (
-                      <a key={i} href={img} target="_blank" rel="noopener noreferrer">
-                        <img src={img} alt={`${project.title} ${i + 1}`} />
-                      </a>
-                    ))}
+                    {(project.images && project.images.length > 0 ? project.images : [project.image])
+                      .slice(0, 4)
+                      .map((img, i) => (
+                        <a
+                          key={i}
+                          href={project.image_link && project.image_link[i] ? project.image_link[i] : '#'}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={img}
+                            alt={`${project.title} 
+                            ${i + 1}`}
+                            loading="lazy" />
+                        </a>
+                      ))}
                   </div>
                 </Col>
 
