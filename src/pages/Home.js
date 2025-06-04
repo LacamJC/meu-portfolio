@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Services from "../Services/Services";
 import Portfolio from "../components/Portfolio/Portfolio";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer.js";
 import Hero from "../components/Hero/Hero";
 import ProductCards from "../components/ProductCard/ProductCard";
 import ProductsSummary from "../components/ProductsSummary/ProductsSummary.js";

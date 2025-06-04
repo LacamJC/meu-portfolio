@@ -1,0 +1,43 @@
+.footer {
+  background-color: #222;
+  color: #eee;
+  padding: 40px 0;
+}
+
+.footer h5 {
+  margin-bottom: 1rem;
+}
+
+.linkList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.linkList li {
+  margin-bottom: 0.5rem;
+}
+
+.linkList a {
+  color: #eee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linkList a:hover {
+  color: #bbb;
+  text-decoration: underline;
+}
+
+.socialIcons {
+  margin-top: 10px;
+}
+
+.socialLink {
+  color: #ababab;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.socialLink:hover {
+  color: #ffffff; /* Azul LinkedIn, por exemplo */
+}/*# sourceMappingURL=Footer.module.css.map */

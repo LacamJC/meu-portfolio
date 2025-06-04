@@ -147,7 +147,7 @@ function Portfolio() {
                     ))}
                   </div>
 
-                  <Button
+                  {/* <Button
                     variant=""
                     href={project.link}
                     target="_blank"
@@ -155,7 +155,7 @@ function Portfolio() {
                     className={`${styles.projectCard__button} btn-outline-dark`}
                   >
                     Ver projeto
-                  </Button>
+                  </Button> */}
                 </Col>
               </Row>
             </div>

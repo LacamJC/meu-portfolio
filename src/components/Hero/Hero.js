@@ -13,7 +13,9 @@ function Hero() {
             <h1 className={styles.content__title}>
               João Ramajo
               <br />
-              <span className={styles.content__subtitle}>Desenvolvedor Web & Fullstack</span>
+              <span className={styles.content__subtitle}>Criador de Soluções Digitais Personalizadas
+
+</span>
             </h1>
             <p className={styles.content__description}>
               Transformando ideias em soluções digitais modernas, eficientes e personalizadas.
