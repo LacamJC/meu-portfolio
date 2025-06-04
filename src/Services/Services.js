@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import styles from './Services.module.css';
+import { useOnScreen } from "../utils/useOnScreen";
 
 const services = [
   {
@@ -24,18 +25,23 @@ const services = [
 ];
 
 function Services() {
+  const [ref, isVisible] = useOnScreen();
+  const animated = ` animate-on-scroll ${isVisible ? 'visible' : ''} `
   return (
     <>
-      <h2 className="text-center mb-4">Como posso ajudar?</h2>
+
+      <h2 className={`text-center mb-4 ${animated}`} ref={ref}>Como posso ajudar?</h2>
       <p
-        className="text-center mb-5"
+        className={`text-center mb-5 ${animated}`}
+        ref={ref}
         style={{ maxWidth: "600px", margin: "0 auto", color: "#555" }}
       >
         Com experiência em desenvolvimento web e sistemas, ofereço soluções sob medida que unem eficiência, qualidade e inovação para transformar suas ideias em resultados concretos.
       </p>
-      <Row>
+
+      <Row className={`${animated}`} ref={ref}>
         {services.map((service, idx) => (
-          <Col key={idx} md={8} lg={6} className="mb-4">
+          <Col key={idx} md={8} lg={6} className={`mb-3 ${animated}`} >
             <Card className={`h-100 shadow-sm ${styles.servicesCard}`}>
               <Card.Body>
                 <Card.Title>

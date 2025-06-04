@@ -1,16 +1,14 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Header from "./components/Header";
-import Services from "./components/Services/Services";
+import Services from "./Services/Services";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero/Hero";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
 import "./App.css";
-import Hero from "./components/Hero/Hero";
-
 function App() {
   return (
     <>
@@ -19,12 +17,12 @@ function App() {
 
         <section id="hero" className="py-5">
           <Container>
-            <Hero/>
+            <Hero />
           </Container>
         </section>
 
-        <section id="services" className="py-5">
-          <Container>
+        <section id="services" className="py-5" >
+          <Container >
             <Services />
           </Container>
         </section>

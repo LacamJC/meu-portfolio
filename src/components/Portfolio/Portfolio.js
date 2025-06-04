@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Card, Button, Badge } from "react-bootstrap";
 import styles from "./Portfolio.module.css"; // assumindo que você já tenha o CSS Modules
-
+import { useOnScreen } from "../../utils/useOnScreen";
 const categoryColors = {
   "Projeto Web": "#4a90e2",          // azul
   "Sustentabilidade": "#3c873a",    // verde
@@ -94,10 +94,12 @@ const projects = [
 
 
 function Portfolio() {
+  const [ref, isVisible] = useOnScreen();
+  const animated = ` animate-on-scroll ${isVisible ? 'visible' : ''} `
   return (
     <>
-      <h2 className="text-center mb-5">Portfólio</h2>
-      <Row className="gy-4">
+      <h2 className={`text-center mb-5 ${animated}`} ref={ref}>Portfólio</h2>
+      <Row className={`gy-4 ${animated}`} ref={ref}>
         {projects.map((project, idx) => (
           <Col key={idx} xs={12}>
             <div className={styles.projectCard}>

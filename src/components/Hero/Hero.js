@@ -1,13 +1,15 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import styles from "./Hero.module.css";
-
+import { useOnScreen } from "../../utils/useOnScreen";
 function Hero() {
+  const [ref, isVisible] = useOnScreen();
+
   return (
     <section className={styles.hero}>
       <Container>
         <Row className="align-items-center">
-          <Col md={6} className={styles.content}>
+          <Col md={6} className={`${styles.content} animate-on-scroll ${isVisible ? 'visible' : ''}`} ref={ref} >
             <h1 className={styles.content__title}>
               João Ramajo
               <br />
@@ -33,7 +35,7 @@ function Hero() {
               </Button>
             </div>
           </Col>
-          <Col md={6} className={styles.imageWrapper}>
+          <Col md={6}className={`${styles.imageWrapper} animate-on-scroll ${isVisible ? 'visible' : ''}`} ref={ref}>
             <img
               src="https://avatars.githubusercontent.com/u/12345678?v=4" // substitua pela sua imagem real
               alt="João Ramajo"
