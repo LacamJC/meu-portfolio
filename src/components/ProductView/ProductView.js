@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Accordion } from "react-bootstrap";
 import styles from "./Product.module.css";
 
 function ProductView({
@@ -9,12 +9,13 @@ function ProductView({
   imageSrc,
   imageAlt = "Imagem ilustrativa",
   buttonLabel = "Entrar em Contato",
-  buttonLink = "#contact"
+  buttonLink = "#contact",
+  accordionItems = []
 }) {
   return (
     <section className={styles.products}>
       <Container>
-        <Row className="align-items-center">
+        <Row className="align-items-center mb-5">
           <Col md={6} className={styles.textContent}>
             <h2 className={styles.title}>{title}</h2>
             <p className={styles.description}>{description}</p>
@@ -31,7 +32,7 @@ function ProductView({
             <p className={styles.callToAction}>
               Quer transformar sua gestão com uma solução sob medida? Vamos conversar!
             </p>
-            <Button variant="dark" href={buttonLink} className={styles.buttonContact}>
+            <Button variant="dark" href={buttonLink} target="_BLANK" className={styles.buttonContact}>
               {buttonLabel}
             </Button>
           </Col>
@@ -44,6 +45,17 @@ function ProductView({
             />
           </Col>
         </Row>
+        <h2>Mais informações</h2>
+        {accordionItems.length > 0 && (
+          <Accordion>
+            {accordionItems.map((item, index) => (
+              <Accordion.Item eventKey={index.toString()} key={index}>
+                <Accordion.Header>{item.title}</Accordion.Header>
+                <Accordion.Body>{item.content}</Accordion.Body>
+              </Accordion.Item>
+            ))}
+          </Accordion>
+        )}
       </Container>
     </section>
   );

@@ -9,8 +9,6 @@ import { useLocation } from "react-router-dom";
 
 import Home from './pages/Home';
 import Header from "./components/Header";
-import Products from "./components/Products/Product";
-import ProductView from "./components/ProductView/ProductView";
 import ProductPage from "./components/ProductPage/ProductPage";
 
 function ScrollToAnchor() {

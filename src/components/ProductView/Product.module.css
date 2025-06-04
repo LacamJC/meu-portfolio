@@ -1,1 +1,45 @@
-/*# sourceMappingURL=Product.module.css.map */
+.products {
+  padding: 100px 0 60px; /* 100px no topo, 60px embaixo */
+  background-color: #f8f9fa;
+}
+
+.featuresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.featuresList li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.featuresList li:hover {
+  transform: translateY(-2px);
+}
+
+.icon {
+  color: #000000;
+  margin-right: 12px;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+  background-color: #f8f9fa; /* mesma cor de fundo para manter uniforme */
+  color: inherit;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f1f1f1;
+  color: #000;
+}/*# sourceMappingURL=Product.module.css.map */
