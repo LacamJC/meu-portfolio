@@ -12,7 +12,7 @@ const products = [
     {
     title: "ExpenseTrack",
     description: "Seu controle financeiro a simples e direto",
-    iconClass: "bi-bar-chart-line",
+    iconClass: "bi-piggy-bank",
     link: "/servico/expense-track",
   },
   // Você pode adicionar outros produtos aqui futuramente

@@ -26,7 +26,7 @@ const projects = [
     ],
     technologies: ["React", "Node.js", "MySQL", "Sequelize", "Bootstrap", "SCSS"],
     categories: ["Projeto Web", "Sustentabilidade"],
-    link: "https://github.com/LacamJC/ReactNPR",
+    link: "https://react-npr.vercel.app/",
     images: [
       "/assets/images/npr/thumb/npr-01.webp",
       "/assets/images/npr/thumb/npr-02.webp",
@@ -51,7 +51,7 @@ const projects = [
     ],
     technologies: ["PHP", "HTML", "CSS (BEM)", "Bootstrap", "MySQL"],
     categories: ["Sistema de Gerenciamento"],
-    link: "https://github.com/LacamJC/My_Bookshelf_2025",
+    link: "",
     images: [
       "/assets/images/mybookshelf/thumb/my-bookshelf-01.webp",
       "/assets/images/mybookshelf/thumb/my-bookshelf-02.webp",
@@ -76,7 +76,7 @@ const projects = [
     ],
     technologies: ["HTML5", "CSS3", "SCSS", "JavaScript"],
     categories: ["Site Informativo", "Multilíngue"],
-    link: "https://github.com/LacamJC/FilmsOnViews",
+    link: "https://films-on-views.vercel.app/",
     images: [
       "/assets/images/filmsOnViews/thumb/lacamjc.github.io-films-on-views-01.webp",
       "/assets/images/filmsOnViews/thumb/lacamjc.github.io-films-on-views-02.webp",
@@ -146,16 +146,18 @@ function Portfolio() {
                       </span>
                     ))}
                   </div>
+                  {
+                    project.link ? (<Button
+                      variant=""
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${styles.projectCard__button} btn-outline-dark`}
+                    >
+                      Ver projeto
+                    </Button>) : ''
+                  }
 
-                  {/* <Button
-                    variant=""
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${styles.projectCard__button} btn-outline-dark`}
-                  >
-                    Ver projeto
-                  </Button> */}
                 </Col>
               </Row>
             </div>
