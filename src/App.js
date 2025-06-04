@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Header from "./components/Header";
-import Services from "./components/Services";
+import Services from "./components/Services/Services";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";

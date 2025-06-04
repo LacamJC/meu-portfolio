@@ -18,102 +18,120 @@ const projects = [
   {
     title: "Natureza Prioridade Renovada",
     description:
-      "Plataforma para facilitar a coleta de lixo reciclável, combater descarte irregular e apoiar a proteção ambiental.",
+      "Plataforma para facilitar a coleta de lixo reciclável, combater descarte irregular e apoiar a proteção ambiental. Conta com cadastro de usuários, pontos de coleta exibidos em mapas, e área de feedback.",
     features: [
       "Cadastro de usuários com MySQL e Sequelize",
-      "Cadastro e visualização de pontos de coleta no mapa via API Google Maps",
-      "Área para feedback dos usuários",
+      "Pontos de coleta via API do Google Maps",
+      "Feedback dos usuários"
     ],
     technologies: ["React", "Node.js", "MySQL", "Sequelize", "Bootstrap", "SCSS"],
     categories: ["Projeto Web", "Sustentabilidade"],
     link: "https://github.com/LacamJC/ReactNPR",
-    image:
-      "https://placehold.co/400x200",
+    images: [
+      "https://placehold.co/250x180",
+      "https://placehold.co/250x180",
+      "https://placehold.co/250x180"
+    ]
   },
   {
     title: "My Bookshelf 2025",
     description:
-      "Sistema completo para cadastro e gerenciamento de livros com login e controle de usuários.",
+      "Sistema para cadastro e gerenciamento de livros com login, controle de usuários e validações. Interface pensada para usabilidade com front-end em HTML/CSS e back-end em PHP puro orientado a objetos.",
     features: [
-      "Tela de login para usuários cadastrados",
-      "Cadastro, edição e remoção de livros",
-      "Campos detalhados: título, autores, número de páginas, gêneros, capa, editora e descrição",
-      "Foco em boa experiência do usuário com validações e mensagens claras",
-      "Front-end em HTML/CSS com BEM e Bootstrap",
-      "Back-end em PHP orientado a objetos, sem frameworks",
+      "Login de usuários",
+      "CRUD completo de livros",
+      "Campos detalhados (autores, capa, descrição, etc)",
+      "Validações com mensagens claras"
     ],
     technologies: ["PHP", "HTML", "CSS (BEM)", "Bootstrap", "MySQL"],
     categories: ["Sistema de Gerenciamento"],
     link: "https://github.com/LacamJC/My_Bookshelf_2025",
-    image: "https://placehold.co/400x200",
+    images: [
+      "https://placehold.co/250x180",
+      "https://placehold.co/250x180"
+    ]
   },
   {
     title: "FilmsOnViews",
     description:
-      "Plataforma para exibição de informações sobre filmes do Studio Ghibli, com trailers, resumos e suporte a múltiplos idiomas.",
+      "Site informativo sobre filmes do Studio Ghibli, com trailers, sinopses e suporte a múltiplos idiomas. Design responsivo e links para assistir aos filmes online.",
     features: [
-      "Suporte a três idiomas: português, inglês e japonês",
-      "Detalhes completos de filmes com informações do diretor e redes sociais",
-      "Trailer integrado e links para assistir no Netflix",
-      "Design responsivo para ótima experiência em dispositivos variados",
+      "Multilíngue: português, inglês e japonês",
+      "Trailers integrados",
+      "Layout responsivo",
+      "Links para Netflix"
     ],
     technologies: ["HTML5", "CSS3", "SCSS", "JavaScript"],
     categories: ["Site Informativo", "Multilíngue"],
     link: "https://github.com/LacamJC/FilmsOnViews",
-    image: "https://placehold.co/400x200",
-  },
+    images: [
+      "https://placehold.co/250x180",
+      "https://placehold.co/250x180",
+      "https://placehold.co/250x180",
+      "https://placehold.co/250x180"
+    ]
+  }
 ];
+
 
 function Portfolio() {
   return (
     <>
       <h2 className="text-center mb-5">Portfólio</h2>
-      <Row>
+      <Row className="gy-4">
         {projects.map((project, idx) => (
-          <Col key={idx} md={6} lg={4} className="mb-4">
-            <Card className="h-100 shadow-sm">
-              <Card.Img
-                variant="top"
-                src={project.image}
-                alt={project.title}
-                className={styles.projectImage}
-              />
-              <Card.Body>
-                <Card.Title className={styles.projectTitle}>{project.title}</Card.Title>
-                <Card.Text className={styles.projectDescription}>
-                  {project.description}
-                </Card.Text>
+          <Col key={idx} xs={12}>
+            <div className={styles.projectCard}>
+              <Row className="g-0">
+                {/* Coluna de imagens */}
+                <Col md={5} className={styles.projectCard__images}>
+                  <div className={styles.imageGrid}>
+                    {(project.images && project.images.length > 0 ? project.images : [project.image]).slice(0, 4).map((img, i) => (
+                      <a key={i} href={img} target="_blank" rel="noopener noreferrer">
+                        <img src={img} alt={`${project.title} ${i + 1}`} />
+                      </a>
+                    ))}
+                  </div>
+                </Col>
 
-                {/* Badges limitadas a 4 e com cores específicas */}
-                <div className={styles.badgesContainer}>
-                  {project.categories.slice(0, 4).map((cat, idx) => (
-                    <span
-                      key={idx}
-                      className={styles.categoryBadge}
-                      style={{
-                        backgroundColor: categoryColors[cat] || "rgba(0,0,0,0.05)",
-                        color: "#fff"
-                      }}
-                    >
-                      {cat}
-                    </span>
-                  ))}
-                </div>
+                {/* Coluna de informações */}
+                <Col md={7} className={styles.projectCard__info}>
+                  <h3 className={styles.projectCard__title}>{project.title}</h3>
+                  <p className={styles.projectCard__description}>{project.description}</p>
 
-                <Button
-                  variant="primary"
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3"
-                >
-                  Ver projeto
-                </Button>
-              </Card.Body>
-            </Card>
+                  {/* Badges de categoria */}
+                  <div className={styles.projectCard__badges}>
+                    {project.categories?.slice(0, 4).map((cat, i) => (
+                      <span
+                        key={i}
+                        className={styles.projectCard__badge}
+                        style={{
+                          backgroundColor: categoryColors[cat] || "#ccc",
+                          color: "#fff"
+                        }}
+                      >
+                        {cat}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Button
+                    variant=""
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${styles.projectCard__button} btn-outline-dark`}
+                  >
+                    Ver projeto
+                  </Button>
+                </Col>
+              </Row>
+            </div>
           </Col>
         ))}
+
       </Row>
+
     </>
   );
 }

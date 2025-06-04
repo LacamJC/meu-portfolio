@@ -1,8 +1,48 @@
 /* Portfolio.module.scss */
-.projectImage {
-    width: 100%;
-    height: 180px; // altura fixa
-    object-fit: cover; // mantém proporção e corta o que passar
+.projectCard {
+    border-bottom: 1px solid #ccc; // linha cinza clara
+    padding-bottom: 1rem; // espaço entre o conteúdo e a linha
+    margin-bottom: 1rem; // espaço para separar do próximo card
+    // background-color: red;
+
+    min-height: 300px;
+}
+
+.projectCard__images {
+    padding: 1rem;
+
+    .imageGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // 2 colunas fixas
+        grid-auto-rows: 120px; // altura fixa
+        gap: 0.5rem;
+
+        a {
+            display: block;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+                transition: transform 0.2s ease;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+.projectCard__info{
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 15px !important;
 }
 
 .projectDescription {
@@ -17,14 +57,14 @@
     font-size: 0.95rem;
 }
 
-.badgesContainer {
+.projectCard__badges {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
     margin-bottom: 1rem;
 }
 
-.categoryBadge {
+.projectCard__badge {
     /* Remover color fixo, pois agora vem via inline */
     display: inline-block;
     padding: 0.3em 0.8em;
@@ -41,23 +81,3 @@
         opacity: 1;
     }
 }
-
-// .techBadge {
-//     display: inline-block;
-//     padding: 0.3em 0.8em; /* um pouco mais confortável */
-//     font-size: 0.75rem;
-//     font-weight: 500;
-//     color: #fff;
-//     border-radius: 12px; /* borda levemente arredondada */
-//     opacity: 0.75; /* leve opacidade */
-//     user-select: none;
-//     margin-right: 0.5rem; /* espaço entre badges horizontal */
-//     margin-bottom: 0.4rem; /* espaço entre badges na quebra de linha */
-//     white-space: nowrap; /* evitar quebra dentro do badge */
-//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); /* sombra suave pra profundidade */
-//     transition: opacity 0.3s ease;
-// }
-
-// .techBadge:hover {
-//     opacity: 1;
-// }

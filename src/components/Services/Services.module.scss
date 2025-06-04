@@ -1,0 +1,45 @@
+.servicesCard {
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // sombra mais suave e um pouco maior
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  padding: 1.8rem; // padding um pouco maior para mais respiro
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+  }
+
+  .card-title {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.35rem; // título maior
+    color: #222;
+    line-height: 1.2; // melhor espaçamento do título
+
+    i {
+      font-size: 2.2rem; // ícone maior
+      color: #007bff;
+      margin-right: 1rem;
+      flex-shrink: 0;
+      transition: color 0.3s ease;
+    }
+  }
+
+  .card-title:hover i {
+    color: #0056b3; // mudar cor do ícone no hover no título para dar mais interatividade
+  }
+
+  .card-text {
+    margin-top: 1rem;
+    font-size: 1.05rem; // texto um pouco maior e mais legível
+    color: #555;
+    line-height: 1.5;
+    flex-grow: 1; // para ocupar espaço e alinhar melhor verticalmente
+  }
+}

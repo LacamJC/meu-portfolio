@@ -1,9 +1,43 @@
 /* Portfolio.module.scss */
-.projectImage {
+.projectCard {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  min-height: 300px;
+}
+
+.projectCard__images {
+  padding: 1rem;
+}
+.projectCard__images .imageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 120px;
+  gap: 0.5rem;
+}
+.projectCard__images .imageGrid a {
+  display: block;
+}
+.projectCard__images .imageGrid a img {
   width: 100%;
-  height: 180px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.projectCard__images .imageGrid a img:hover {
+  transform: scale(1.05);
+}
+
+.projectCard__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-left: 15px !important;
 }
 
 .projectDescription {
@@ -16,14 +50,14 @@
   font-size: 0.95rem;
 }
 
-.badgesContainer {
+.projectCard__badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-bottom: 1rem;
 }
 
-.categoryBadge {
+.projectCard__badge {
   /* Remover color fixo, pois agora vem via inline */
   display: inline-block;
   padding: 0.3em 0.8em;
@@ -38,6 +72,6 @@
   opacity: 0.85;
   transition: opacity 0.3s ease;
 }
-.categoryBadge:hover {
+.projectCard__badge:hover {
   opacity: 1;
 }/*# sourceMappingURL=Portfolio.module.css.map */

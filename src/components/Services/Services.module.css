@@ -1,0 +1,40 @@
+.servicesCard {
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.servicesCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+}
+.servicesCard .card-title {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: #222;
+  line-height: 1.2;
+}
+.servicesCard .card-title i {
+  font-size: 2.2rem;
+  color: #007bff;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+.servicesCard .card-title:hover i {
+  color: #0056b3;
+}
+.servicesCard .card-text {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.5;
+  flex-grow: 1;
+}/*# sourceMappingURL=Services.module.css.map */
