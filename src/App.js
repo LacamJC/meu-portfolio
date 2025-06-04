@@ -1,47 +1,46 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import Header from "./components/Header";
-import Services from "./Services/Services";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero/Hero";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+
+import Home from './pages/Home';
+import Header from "./components/Header";
+import Products from "./components/Products/Product";
+import ProductView from "./components/ProductView/ProductView";
+import ProductPage from "./components/ProductPage/ProductPage";
+
+function ScrollToAnchor() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.replace("#", ""));
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100); // Pequeno delay para garantir renderização
+      }
+    }
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
-    <>
+    <Router>
+      <ScrollToAnchor />
       <Header />
-      <main>
-
-        <section id="hero" className="py-5">
-          <Container>
-            <Hero />
-          </Container>
-        </section>
-
-        <section id="services" className="py-5" >
-          <Container >
-            <Services />
-          </Container>
-        </section>
-
-        <section id="portfolio" className="bg-light py-5">
-          <Container>
-            <Portfolio />
-          </Container>
-        </section>
-
-        <section id="contact" className="py-5">
-          <Container>
-            <Contact />
-          </Container>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/servico/:productName" element={<ProductPage />} />
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;

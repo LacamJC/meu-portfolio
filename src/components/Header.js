@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
+import NavLinkAdaptativo from "../utils/NavLinkAdaptativo";
 
 const SECTIONS = ["hero", "services", "portfolio", "contact"];
 
@@ -29,22 +30,14 @@ function Header() {
     return (
         <Navbar expand="lg" bg="dark" variant="dark" sticky="top">
             <Container>
-                <Navbar.Brand href="#hero"><i class="bi bi-code-slash"></i> Ramajo</Navbar.Brand>
+                <Navbar.Brand href="/"><i class="bi bi-code-slash"></i> Ramajo</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbar-nav" />
                 <Navbar.Collapse id="navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link href="#hero" className={activeSection === "hero" ? "active" : ""}>
-                            Sobre mim
-                        </Nav.Link>
-                        <Nav.Link href="#services" className={activeSection === "services" ? "active" : ""}>
-                            Serviços
-                        </Nav.Link>
-                        <Nav.Link href="#portfolio" className={activeSection === "portfolio" ? "active" : ""}>
-                            Portfólio
-                        </Nav.Link>
-                        <Nav.Link href="#contact" className={activeSection === "contact" ? "active" : ""}>
-                            Contato
-                        </Nav.Link>
+                        <NavLinkAdaptativo section="hero" label="Sobre mim" activeSection={activeSection} />
+                        <NavLinkAdaptativo section="services" label="Serviços" activeSection={activeSection} />
+                        <NavLinkAdaptativo section="portfolio" label="Portfólio" activeSection={activeSection} />
+                        <NavLinkAdaptativo section="contact" label="Contato" activeSection={activeSection} />
                     </Nav>
                 </Navbar.Collapse>
             </Container>

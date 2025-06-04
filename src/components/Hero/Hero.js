@@ -18,24 +18,34 @@ function Hero() {
             <p className={styles.content__description}>
               Transformando ideias em soluções digitais modernas, eficientes e personalizadas.
             </p>
-            <div className={styles.content__buttons}>
-              <Button
-                variant="dark"
-                href="#portfolio"
-                className={styles.buttonPrimary}
-              >
-                Ver Portfólio
-              </Button>
-              <Button
-                variant="outline-dark"
-                href="#contact"
-                className={styles.buttonSecondary}
-              >
-                Contato
-              </Button>
+            <div className={styles.actionRow}>
+              <div className={styles.content__buttons}>
+                <Button
+                  variant="dark"
+                  href="#portfolio"
+                  className={styles.buttonPrimary}
+                >
+                  Ver Portfólio
+                </Button>
+                <Button
+                  variant="outline-dark"
+                  href="#contact"
+                  className={styles.buttonSecondary}
+                >
+                  Contato
+                </Button>
+              </div>
+              <div className={styles.content__social}>
+                <a href="https://github.com/LacamJC" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <i className="bi bi-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/joao-ramajo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <i className="bi bi-linkedin"></i>
+                </a>
+              </div>
             </div>
           </Col>
-          <Col md={6}className={`${styles.imageWrapper} animate-on-scroll ${isVisible ? 'visible' : ''}`} ref={ref}>
+          <Col md={6} className={`${styles.imageWrapper} animate-on-scroll ${isVisible ? 'visible' : ''}`} ref={ref}>
             <img
               src="assets/images/my-and-rhaj.png" // substitua pela sua imagem real
               alt="João Ramajo"

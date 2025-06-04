@@ -1,0 +1,69 @@
+@charset "UTF-8";
+.products {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.textContent {
+  padding-right: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111; /* título mais forte */
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.featuresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.featuresList li {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.icon {
+  color: #000;
+  margin-right: 10px;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.callToAction {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.buttonContact {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+}
+
+.imageWrapper {
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}/*# sourceMappingURL=Products.module.css.map */
