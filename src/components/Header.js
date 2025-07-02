@@ -35,7 +35,7 @@ function Header() {
                 <Navbar.Collapse id="navbar-nav">
                     <Nav className="ms-auto">
                         <NavLinkAdaptativo section="hero" label="Sobre mim" activeSection={activeSection} />
-                        <NavLinkAdaptativo section="services" label="Serviços" activeSection={activeSection} />
+                        {/* <NavLinkAdaptativo section="services" label="Serviços" activeSection={activeSection} /> */}
                         <NavLinkAdaptativo section="portfolio" label="Portfólio" activeSection={activeSection} />
                         <NavLinkAdaptativo section="contact" label="Contato" activeSection={activeSection} />
                     </Nav>

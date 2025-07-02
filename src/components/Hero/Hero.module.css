@@ -110,4 +110,62 @@
 
 .content__social a:hover i {
   color: #555;
+}
+
+.content__strongwords {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #4b5563;
+  transition: transform 0.3s ease, color 0.3s ease;
+  animation: waveIdle 3s ease-in-out infinite;
+}
+
+/* Aplica delay para o efeito "ondulado" */
+.icon:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.icon:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.icon:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.icon:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.icon:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.icon:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.icon:hover {
+  color: #191c20;
+  transform: scale(1.1);
+}
+
+@keyframes waveIdle {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=Hero.module.css.map */

@@ -1,5 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { FaBootstrap, FaCss3Alt, FaFigma, FaGitAlt, FaGithubSquare, FaHtml5, FaJava, FaLinkedin, FaLinux, FaNodeJs, FaPhp, FaSass } from "react-icons/fa"
+import { SiExpress, SiMysql } from 'react-icons/si'
+import { IoLogoJavascript } from 'react-icons/io'
+import { FaLaravel } from "react-icons/fa";
 import styles from "./Hero.module.css";
 import { useOnScreen } from "../../utils/useOnScreen";
 function Hero() {
@@ -11,13 +15,21 @@ function Hero() {
         <Row className="align-items-center">
           <Col md={6} className={`${styles.content} animate-on-scroll ${isVisible ? 'visible' : ''}`} ref={ref} >
             <h1 className={styles.content__title}>
-              João Ramajo
+              JOÃO RAMAJO
               <br />
-              <span className={styles.content__subtitle}>Criador de Soluções Digitais Personalizadas
+              <span className={styles.content__subtitle}>Desenvolvedor Backend
               </span>
             </h1>
-            <p className={styles.content__description}>
+            {/* <p className={styles.content__description}>
               Construindo soluções digitais que facilitam processos, aumentam resultados e fazem sua empresa crescer.
+            </p> */}
+            <p className={styles.content__strongwords}>
+              <FaLaravel className={`${styles.icon}`} />
+              <SiMysql className={`${styles.icon}`} />
+              <FaPhp className={`${styles.icon}`} />
+              <FaNodeJs className={`${styles.icon}`} />
+              <FaGitAlt className={`${styles.icon}`} />
+              <FaBootstrap className={`${styles.icon}`} />
             </p>
             <div className={styles.actionRow}>
               <div className={styles.content__buttons}>
@@ -30,10 +42,11 @@ function Hero() {
                 </Button>
                 <Button
                   variant="outline-dark"
-                  href="#contact"
+                  href="/docs/curriculo_joao_ramajo_desenvolvedor_backend.pdf"
+                  target="_blank"
                   className={styles.buttonSecondary}
                 >
-                  Contato
+                  Currículo
                 </Button>
               </div>
               <div className={styles.content__social}>

@@ -30,11 +30,11 @@ function Home() {
                     </Container>
                 </section>
 
-                <section id="services" className="py-5" >
+                {/* <section id="services" className="py-5" >
                     <Container >
                         <Services />
                     </Container>
-                </section>
+                </section> */}
 
                 <section id="portfolio" className="bg-light py-5">
                     <Container>
@@ -43,11 +43,11 @@ function Home() {
                 </section>
 
 
-                <section id="produtos" className="bg-light py-5">
+                {/* <section id="produtos" className="bg-light py-5">
                     <Container>
                         <ProductsSummary/>
                     </Container>
-                </section>
+                </section> */}
 
                 <section id="contact" className="py-5">
                     <Container>
