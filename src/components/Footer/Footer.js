@@ -13,17 +13,17 @@ function Footer() {
             <h5>Navegação</h5>
             <ul className={styles.linkList}>
               <li><NavLinkAdaptativo section="hero" label="Sobre mim" /></li>
-              <li><NavLinkAdaptativo section="services" label="Serviços" /></li>
+              {/* <li><NavLinkAdaptativo section="services" label="Serviços" /></li> */}
               <li><NavLinkAdaptativo section="portfolio" label="Portfólio" /></li>
               <li><NavLinkAdaptativo section="contact" label="Contato" /></li>
             </ul>
           </Col>
           <Col md={4}>
-            <h5>Produtos</h5>
-            <ul className={styles.linkList}>
-              <li><Link to="/servico/smartreport">SmartReport</Link></li>
+            {/* <h5>Produtos</h5> */}
+            {/* <ul className={styles.linkList}> */}
+              {/* <li><Link to="/servico/smartreport">SmartReport</Link></li> */}
               {/* Mais produtos aqui */}
-            </ul>
+            {/* </ul> */}
           </Col>
           <Col md={4}>
             <h5>Contato</h5>
