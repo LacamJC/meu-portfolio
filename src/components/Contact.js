@@ -10,8 +10,8 @@ function Contact() {
         <>
             <h2 className={`text-center mb-4 ${animated}`} ref={ref}>Entre em contato comigo</h2>
             <p className={`text-center mb-5 ${animated}`} ref={ref}>
-                Ficarei feliz em conversar sobre seu projeto, responder dúvidas ou colaborar com sua ideia.
-                Me chame por onde preferir:
+                {/* Ficarei feliz em conversar sobre seu projeto, responder dúvidas ou colaborar com sua ideia.
+                Me chame por onde preferir: */}
             </p>
             <Row className={`justify-content-center text-center ${animated}`} ref={ref}>
                 <Col md={4} className="mb-3">
